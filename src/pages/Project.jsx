@@ -84,8 +84,8 @@ function Project() {
                     <span className='text-[#2D9C8F] text-[14px]'>Bernadettechukwuedo</span>
                     <span className='text-[#5B7F8E] text-[14px]'>/</span>
                     <span className='text-[#F4F7F6] text-[14px] font-medium'>projects</span>
-                    <div className='border border-[#1E3A44] rounded-full px-3 py-0.5 ml-1'>
-                        <p className='text-[#5B7F8E] text-[11px]'>Public</p>
+                    <div className='hidden md:flex border border-[#1E3A44] rounded-full px-3 py-0.5 ml-1'>
+                        <p className='text-[#5B7F8E] text-[11px] '>Public</p>
                     </div>
                 </div>
 
