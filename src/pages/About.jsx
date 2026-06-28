@@ -47,17 +47,17 @@ const about_section=[
 ]
 function About(){
     return(
-        <div className="bg-[#0B2530] py-24 " id="about">
+        <div className="bg-[#0D1117] py-24 border-t border-[#30363D] " id="about">
             <motion.div variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
             <div className='max-w-340 mx-auto px-8  grid grid-cols-1 md:grid-cols-2 gap-8' >
                 <motion.div variants={childVariants1}>
-                        <img  className='border-2 border-[#2D9C8F] rounded-lg w-full h-100 object-cover object-top' src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782487367/about_profile_qai6b9.jpg' alt='An image of Bernadette Chukwuedo'/>
+                        <img  className='border-2 border-[#BDD1FF] rounded-lg w-full h-100 object-cover object-top' src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782487367/about_profile_qai6b9.jpg' alt='An image of Bernadette Chukwuedo'/>
                 </motion.div>
 
                 <motion.div className='space-y-6' variants={childVariants2}>
-                    <p className='text-[#2D9C8F] font-semibold text-[14px]'>ABOUT</p>
-                    <p className='font-serif max-w-xl text-[#F4F7F6] text-xl'>I'm a fullstack engineer based in Lagos, working across Django, FastAPI, React and Vue to build complete products. Lately I've been deepening into machine learning from classic models to neural networks — so the systems I build can get smarter, not just bigger.</p>
-                    <p className='font-serif max-w-xl text-[#F4F7F6] text-xl opacity-75'>Outside of code, I write on LinkedIn about growth, self-belief, and what it actually looks like to build a career in tech and I'm always glad to talk through career questions with developers earlier in their journey than me.</p>
+                    <p className='text-[#BDD1FF] font-semibold text-[14px]'>ABOUT</p>
+                    <p className=' max-w-xl text-[#F4F7F6] text-xl'>I'm a fullstack software engineer, working across Django, FastAPI, React and Vue to build complete products. Lately I've been deepening into machine learning from classic models to neural networks — so the systems I build can get smarter, not just bigger.</p>
+                    <p className=' max-w-xl text-[#F4F7F6] text-xl opacity-75'>Outside of code, I write on LinkedIn about growth, self-belief, and what it actually looks like to build a career in tech and I'm always glad to talk through career questions with developers earlier in their journey than me.</p>
                 </motion.div>
 
             </div>
@@ -65,7 +65,7 @@ function About(){
 
                {about_section.map((abouts) =>( <motion.div key={abouts.id} className='bg-[#163844] rounded-md p-8 flex flex-col space-y-2 justify-center text-center items-center'>
                     <Icon style= {{ color:abouts.color}} className=" text-2xl" icon={abouts.icon} />
-                    <p className='text-[#F4F7F6] font-sans'> {abouts.name}</p>
+                    <p className='text-[#F4F7F6] '> {abouts.name}</p>
                 </motion.div>))}
 
       

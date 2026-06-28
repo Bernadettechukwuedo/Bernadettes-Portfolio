@@ -24,7 +24,7 @@ function Navbar() {
     };
 
     return (
-        <motion.nav id="navbar" className="fixed top-0 left-0 w-full z-20 bg-[#161B22] border-b border-[#30363D]" initial={{opacity:0, x:-100}} animate={{ x:0, opacity: 1}} transition={{ duration: 0.4, ease: 'easeInOut' }}>
+        <motion.nav id="navbar" className="fixed top-0 left-0 w-full z-20 bg-[#0D1117]/80 backdrop-blur-md border-b border-[#30363D]" initial={{opacity:0, x:-100}} animate={{ x:0, opacity: 1}} transition={{ duration: 0.4, ease: 'easeInOut' }}>
             <div className="hidden  max-w-340 mx-auto px-8 py-5 md:flex items-center justify-between ">
                 <div className='flex flex-row items-center  gap-3'>
                     
@@ -33,25 +33,25 @@ function Navbar() {
                         rel="noopener noreferrer"
                     >
                         <Icon
-                            className="text-[#F4F7F6] text-2xl hover:text-[#2D9C8F] transition-colors"
+                            className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
                             icon="ri:github-line"
                         />
                     </a>
-                    <a href="#hero"><span className='text-[#2D9C8F] text-[15px]'>Bernadettechukwuedo</span></a>
+                    <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
                     <span className='text-[#5B7F8E] text-[15px]'>/</span>
                     <span className='text-[#F4F7F6] text-[15px] font-medium'>portfolio</span>
 
                 </div>
 
                 <div className='flex space-x-8 '>
-                    <a href='#about' className="font-sans text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3" >About</a>
-                    <a href="#project" className="font-sans text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3">Project</a>
-                    <a href="#contact" className="font-sans text-[14px] tracking-[0.14em]  text-[#ffffff] transition duration-300 bg-[#4A79E7] rounded-full py-2 px-3 hover:bg-[#ffffff] hover:text-black">Contact </a>
+                    <a href='#about' className=" text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3" >About</a>
+                    <a href="#project" className=" text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3">Project</a>
+                    <a href="#contact" className=" text-[14px] tracking-[0.14em]  text-[#ffffff] transition duration-300 bg-[#4A79E7] rounded-full py-2 px-3 hover:bg-[#ffffff] hover:text-black">Contact </a>
                 </div>
             </div>
 
             {/* Mobile version */}
-            <div className="md:hidden flex items-center justify-between w-full px-8 py-5 bg-[#161B22] border-b border-[#30363D]">
+            <div className="md:hidden flex items-center justify-between w-full px-8 py-5 bg-[#0D1117]/80 backdrop-blur-md  border-b border-[#30363D]">
                 <div className='flex flex-row items-center  gap-3'>
                     
                     <a    href="https://github.com/Bernadettechukwuedo"
@@ -59,17 +59,17 @@ function Navbar() {
                         rel="noopener noreferrer"
                     >
                         <Icon
-                            className="text-[#F4F7F6] text-2xl hover:text-[#2D9C8F] transition-colors"
+                            className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
                             icon="ri:github-line"
                         />
                     </a>
-                    <a href="#hero"><span className='text-[#2D9C8F] text-[15px]'>Bernadettechukwuedo</span></a>
+                    <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
              
 
                 </div>
                 
                 <button aria-label="Menu" onClick={toggleMenu}>
-                    <Icon className="text-[#8A939D] hover:text-[#2D9C8F] text-2xl" icon="pepicons-pencil:menu" />
+                    <Icon className="text-[#8A939D] hover:text-[#BDD1FF] text-2xl" icon="pepicons-pencil:menu" />
                 </button>
             </div>
             <AnimatePresence mode="wait">
@@ -90,17 +90,17 @@ function Navbar() {
                                 rel="noopener noreferrer"
                             >
                                 <Icon
-                                    className="text-[#F4F7F6] text-2xl hover:text-[#2D9C8F] transition-colors"
+                                    className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
                                     icon="ri:github-line"
                                 />
                             </a>
-                            <a onClick={toggleMenu}  href="#hero"><span className='text-[#2D9C8F] text-[16px]'>Bernadettechukwuedo</span></a>
+                            <a onClick={toggleMenu}  href="#hero"><span className='text-[#4A79E7] text-[16px]'>Bernadettechukwuedo</span></a>
                     
 
                         </div>
                         
 
-                        <button onClick={toggleMenu} aria-label="cancel" className="text-[#8A939D] hover:text-[#2D9C8F] text-2xl">
+                        <button onClick={toggleMenu} aria-label="cancel" className="text-[#8A939D] hover:text-[#BDD1FF] text-2xl">
                             <Icon icon="mdi:cancel-bold" />
                         </button>
                     </div>
@@ -109,17 +109,17 @@ function Navbar() {
                     <div className='flex flex-col space-y-8 mt-20 items-center py-24'>
                                 <motion.a href="#about" onClick={() => {
                                 setActiveLink("about");
-                                toggleMenu();}} className={`font-sans text-xl tracking-[0.14em]  ${activeLink === "about" ? "text-[#2D9C8F]" : "text-[#8A939D]"}  hover:text-[#2D9C8F] transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }}>About</motion.a>
+                                toggleMenu();}} className={` text-xl tracking-[0.14em]  ${activeLink === "about" ? "text-[#4A79E7]" : "text-[#FFFFFF]"}  hover:text-[#4A79E7] transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }}>About</motion.a>
 
                                 <motion.a href='#project' onClick={() => {
                                     setActiveLink("project");
                                     toggleMenu();
-                                }} className={`font-sans text-xl tracking-[0.14em]  ${activeLink === "project" ?  "text-[#2D9C8F]" : "text-[#8A939D]"}  hover:text-[#2D9C8F]  transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }} >Project</motion.a>
+                                }} className={` text-xl tracking-[0.14em]  ${activeLink === "project" ?  "text-[#4A79E7]" : "text-[#FFFFFF]"}  hover:text-[#4A79E7]  transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }} >Project</motion.a>
 
                                 <motion.a href="#contact" onClick={() => {
                                         setActiveLink("contact");
                                         toggleMenu();
-                                    }} className={`font-sans text-xl tracking-[0.14em]  ${activeLink === "contact" ?  "text-[#2D9C8F]" : "text-[#8A939D]"}  hover:text-[#2D9C8F]  transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }}>Contact</motion.a>
+                                    }} className={` text-xl tracking-[0.14em]  ${activeLink === "contact" ?  "text-[#4A79E7]" : "text-[#FFFFFF]"}  hover:text-[#4A79E7]  transition duration-300`} initial={{ x: 0 }} whileHover={{ x: 10 }} transition={{ type: "tween", duration:0.1, ease:'easeOut' }}>Contact</motion.a>
 
                            
                     </div>

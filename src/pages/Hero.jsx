@@ -121,12 +121,12 @@ const childVariants1 = {
 
 function Hero() {
     return (
-        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center py-24 overflow-hidden " id="hero">
-            <motion.div className='max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
+        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center  overflow-hidden " id="hero">
+            <motion.div className=' max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start py-20' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
                 <div >
-                        <motion.div variants={childVariants1} className='flex flex-row gap-4 md:gap-6'>
-                            <img className=" w-30 h-30 md:w-40 md:h-40 rounded-full object-cover object-top border-2 border-[#2D9C8F]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
-                            <motion.div className='flex flex-col mt-4' >
+                        <motion.div variants={childVariants1} className='flex flex-col lg:flex-row gap-4 md:gap-6' >
+                            <img className=" w-30 h-30 md:w-40 md:h-40 rounded-full object-cover object-top border-2 border-[#BDD1FF]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
+                            <motion.div className='flex flex-col mt-2' >
                                 <h1 className='text-[#ffffff] text-4xl md:text-5xl'>Bernadette</h1>
                                 <h2 className='text-[#ffffff] text-4xl md:text-5xl'>Chukwuedo</h2>
                                 <p className='text-[#BDD1FF] text-lg'>@Bernadettechukwuedo</p>
@@ -135,10 +135,10 @@ function Hero() {
                             </motion.div>
                         </motion.div>
 
-                        <motion.p variants={childVariants1} className='text-[#FFFFFF] mt-10 text-2xl'>Fullstack Software Engineer crafting robust backend architectures and AI tools designed to solve real-world challenges and empower the next generation of tech talent.</motion.p>
+                        <motion.p variants={childVariants1} className='text-[#FFFFFF] mt-6 text-xl lg:text-2xl wrap-break-words'>Fullstack Software Engineer crafting robust backend architectures and AI tools designed to solve real-world challenges and empower the next generation of tech talent.</motion.p>
 
-                        <motion.div variants={childVariants1} className='mt-10 flex flex-row gap-4'>
-                            <motion.a whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }} href='#project' className='bg-[#4A79E7] text-[#ffffff] px-4 py-2 rounded-full text-center cursor-pointer font-sans font-medium text-[16px] hover:bg-[#FFFFFF] hover:text-black transition-colors'> View projects</motion.a>
+                        <motion.div variants={childVariants1} className='mt-6 flex flex-row gap-4'>
+                            <motion.a whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }} href='#project' className='bg-[#4A79E7] text-[#ffffff] px-4 py-2 rounded-full text-center cursor-pointer font-medium text-[16px] hover:bg-[#FFFFFF] hover:text-black transition-colors'> View projects</motion.a>
 
                             
                             <motion.a 
@@ -146,7 +146,7 @@ function Hero() {
                             initial="initial"
                             whileHover="hover" 
                             href="#contact" 
-                            className="flex flex-row items-center gap-2 bg-transparent text-[#ffffff] px-4 py-2 rounded-xl text-center cursor-pointer font-sans font-medium text-[16px] hover:bg-[#4A79E7] transition-colors"
+                            className="flex flex-row items-center gap-2 bg-transparent text-[#ffffff] px-4 py-2 rounded-xl text-center cursor-pointer font-medium text-[16px] hover:bg-[#4A79E7] transition-colors"
                             > 
                             Get in touch
                             <motion.div

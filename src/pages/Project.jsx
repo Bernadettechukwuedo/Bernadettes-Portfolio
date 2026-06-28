@@ -60,11 +60,11 @@ function Project() {
     const [selectedProject, setSelectedProject] = useState(projects[0]);
 
     return (
-        <div className='bg-[#0B1F28] py-24' id="project">
+        <div className='bg-[#0D1117] py-24 border-t border-[#30363D] ' id="project">
             <motion.div className='max-w-340 mx-auto px-8' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
 
                 {/* label */}
-                <p className='text-[#2D9C8F] font-semibold text-[14px] mb-6 tracking-widest uppercase'>
+                <p className='text-[#BDD1FF] font-semibold text-[14px] mb-6 tracking-widest uppercase'>
                     Selected Work
                 </p>
 
@@ -81,16 +81,16 @@ function Project() {
                             icon="ri:github-line"
                         />
                     </a>
-                    <span className='text-[#2D9C8F] text-[14px]'>Bernadettechukwuedo</span>
-                    <span className='text-[#5B7F8E] text-[14px]'>/</span>
-                    <span className='text-[#F4F7F6] text-[14px] font-medium'>projects</span>
+                    <span className='text-[#BDD1FF] text-[12px] md:text-[14px] '>Bernadettechukwuedo</span>
+                    <span className='text-[#5B7F8E] text-[12px] md:text-[14px] '>/</span>
+                    <span className='text-[#F4F7F6] text-[12px] md:text-[14px] font-medium'>projects</span>
                     <div className='hidden md:flex border border-[#1E3A44] rounded-full px-3 py-0.5 ml-1'>
                         <p className='text-[#5B7F8E] text-[11px] '>Public</p>
                     </div>
                 </div>
 
                 {/* code tab */}
-                <div className='flex flex-row items-center bg-[#0B1F28] border-x px-3 py-2 gap-2 border-b border-[#2D9C8F]'>
+                <div className='flex flex-row items-center bg-[#0B1F28] border-x px-3 py-2 gap-2 border-b border-[#BDD1FF]'>
                     <Icon
                         className="text-[#F4F7F6] text-lg"
                         icon="mingcute:code-line"
@@ -133,11 +133,11 @@ function Project() {
                                     className="text-[#5B7F8E] text-lg "
                                     icon="material-symbols-light:folder-rounded"
                                 />
-                                <span className='text-[#2D9C8F] text-[14px]'>
+                                <span className='text-[#BDD1FF] text-[14px]'>
                                     {project.name}
                                 </span>
                                 {project.status && (
-                                    <span className='ml-auto text-[10px] text-[#5DCAA5] border border-[#1D9E75] rounded-full px-2 py-0.5'>
+                                    <span className='ml-auto text-[10px] text-[#BDD1FF] border border-[#BDD1FF] rounded-full px-2 py-0.5'>
                                         {project.status}
                                     </span>
                                 )}
@@ -164,7 +164,7 @@ function Project() {
                                 {selectedProject.stack.map((tech, i) => (
                                     <span
                                         key={i}
-                                        className='text-[11px] text-[#2D9C8F] border border-[#1E3A44] rounded-full px-3 py-0.5'
+                                        className='text-[11px] text-[#BDD1FF] border border-[#1E3A44] rounded-full px-3 py-0.5'
                                     >
                                         {tech}
                                     </span>
@@ -194,7 +194,7 @@ function Project() {
                         <a  href={selectedProject.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className='flex flex-row items-center gap-2 text-[#2D9C8F] text-[13px] hover:text-[#5DCAA5] transition-colors w-fit mt-2'
+                            className='flex flex-row items-center gap-2 text-[#BDD1FF] text-[13px] hover:text-[#ffffff] transition-colors w-fit mt-2'
                         >
                                 <Icon icon="ph:link-bold" className='text-base '/>
                                                 Go Live
