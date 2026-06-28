@@ -89,7 +89,7 @@ function Contact() {
 
                     <label className="mt-3" htmlFor="message">Message</label>
                     <textarea name="message" id="message" placeholder="Tell me about your project" required className="border border-[#E0E6E5] bg-white rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#BDD1FF]  text-[#0B2530] placeholder:text-[#9AAAA8]"></textarea>
-                     <motion.button disabled={loading} whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }}  type="submit" className="bg-[#4A79E7] w-full mt-4 text-white font-medium py-3 px-6 rounded-md hover:bg-[#0D1117] transition-colors">
+                     <motion.button disabled={loading} whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }}  type="submit" className="bg-[#161B22] w-full mt-4 text-white font-medium py-3 px-6 rounded-md hover:bg-[#4A79E7] transition-colors">
                             {loading? "Sending..." : "Send message"}
                         </motion.button>
 

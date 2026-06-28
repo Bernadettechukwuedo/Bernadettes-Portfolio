@@ -2,6 +2,20 @@ import {motion, useMotionValueEvent, useScroll, AnimatePresence} from 'framer-mo
 import { useState } from 'react';
 import { Icon } from "@iconify/react";
 
+const containerVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.1, ease: 'easeOut', when: "beforeChildren", staggerChildren: 0.15 } },
+};
+
+const childVariants1 = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut',delay: 0} },
+};
+
+const childVariants2 = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut',delay: 0.2} },
+};
 function Navbar() {
     const [visible, setVisible] = useState(false);
     const { scrollY }= useScroll();
@@ -24,9 +38,9 @@ function Navbar() {
     };
 
     return (
-        <motion.nav id="navbar" className="fixed top-0 left-0 w-full z-20 bg-[#0D1117]/80 backdrop-blur-md border-b border-[#30363D]" initial={{opacity:0, x:-100}} animate={{ x:0, opacity: 1}} transition={{ duration: 0.4, ease: 'easeInOut' }}>
-            <div className="hidden  max-w-340 mx-auto px-8 py-5 md:flex items-center justify-between ">
-                <div className='flex flex-row items-center  gap-3'>
+        <motion.nav id="navbar" className="fixed top-0 left-0 w-full z-20 bg-[#0D1117]/80 backdrop-blur-md border-b border-[#30363D]">
+            <motion.div className="hidden  max-w-340 mx-auto px-8 py-5 md:flex items-center justify-between " variants={containerVariants} initial="hidden" animate='visible'>
+                <motion.div className='flex flex-row items-center  gap-3' variants={childVariants1}>
                     
                     <a    href="https://github.com/Bernadettechukwuedo"
                         target="_blank"
@@ -41,14 +55,14 @@ function Navbar() {
                     <span className='text-[#5B7F8E] text-[15px]'>/</span>
                     <span className='text-[#F4F7F6] text-[15px] font-medium'>portfolio</span>
 
-                </div>
+                </motion.div>
 
-                <div className='flex space-x-8 '>
-                    <a href='#about' className=" text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3" >About</a>
-                    <a href="#project" className=" text-[14px] tracking-[0.14em]  text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3">Project</a>
-                    <a href="#contact" className=" text-[14px] tracking-[0.14em]  text-[#ffffff] transition duration-300 bg-[#4A79E7] rounded-full py-2 px-3 hover:bg-[#ffffff] hover:text-black">Contact </a>
-                </div>
-            </div>
+                <motion.div className='flex space-x-8 ' variants={childVariants2}>
+                    <a href='#about' className=" text-[12px]   text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3" >About</a>
+                    <a href="#project" className=" text-[12px]   text-[#ffffff] hover:text-[#4A79E7] transition duration-300 py-2 px-3">Project</a>
+                    <a href="#contact" className=" text-[12px]  text-[#ffffff] transition duration-300 bg-[#4A79E7] rounded-full py-2 px-4 hover:bg-[#ffffff] hover:text-black">Contact </a>
+                </motion.div>
+            </motion.div>
 
             {/* Mobile version */}
             <div className="md:hidden flex items-center justify-between w-full px-8 py-5 bg-[#0D1117]/80 backdrop-blur-md  border-b border-[#30363D]">

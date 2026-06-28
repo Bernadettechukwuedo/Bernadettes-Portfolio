@@ -14,7 +14,7 @@ const achievements =[
       color:'#2C9A8D'
     },
     { id:3,
-      name:'HTML/CSS/Tailwind CSS',
+      name:'EITCA',
       icon:'mdi:certificate',
       color:'#539CF0'
     }
@@ -121,24 +121,23 @@ const childVariants1 = {
 
 function Hero() {
     return (
-        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center  overflow-hidden " id="hero">
-            <motion.div className=' max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start py-20' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
-                <div >
-                        <motion.div variants={childVariants1} className='flex flex-col lg:flex-row gap-4 md:gap-6' >
-                            <img className=" w-30 h-30 md:w-40 md:h-40 rounded-full object-cover object-top border-2 border-[#BDD1FF]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
-                            <motion.div className='flex flex-col mt-2' >
-                                <h1 className='text-[#ffffff] text-4xl md:text-5xl'>Bernadette</h1>
-                                <h2 className='text-[#ffffff] text-4xl md:text-5xl'>Chukwuedo</h2>
-                                <p className='text-[#BDD1FF] text-lg'>@Bernadettechukwuedo</p>
-   
+        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center  overflow-hidden py-24 " id="hero">
+            <motion.div className=' max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 items-center  ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
+                <div className='space-y-8.5'>
+                        <motion.div variants={childVariants1} className='flex flex-col lg:flex-row gap-4 md:gap-6 items-center' >
+                            <img className=" w-40 h-40  rounded-full object-cover object-top border-2 border-[#BDD1FF]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
+                            <motion.div className='flex flex-col' >
+                                <h1 className='text-[#ffffff] text-[40px] font-black leading-tight'>Bernadette</h1>
+                                <h2 className='text-[#ffffff] text-[40px]  font-black leading-tight'>Chukwuedo</h2>
+                                <p className='text-[#BDD1FF] text-[14px] font-normal'>@bernadettechukwuedo</p>
 
-                            </motion.div>
+                            </motion.div>   
                         </motion.div>
 
-                        <motion.p variants={childVariants1} className='text-[#FFFFFF] mt-6 text-xl lg:text-2xl wrap-break-words'>Fullstack Software Engineer crafting robust backend architectures and AI tools designed to solve real-world challenges and empower the next generation of tech talent.</motion.p>
+                        <motion.p variants={childVariants1} className='text-[#FFFFFF] text-[18px] max-w-md '>Fullstack Software Engineer crafting robust backend architectures and AI tools designed to solve real-world challenges and empower the next generation of tech talent.</motion.p>
 
-                        <motion.div variants={childVariants1} className='mt-6 flex flex-row gap-4'>
-                            <motion.a whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }} href='#project' className='bg-[#4A79E7] text-[#ffffff] px-4 py-2 rounded-full text-center cursor-pointer font-medium text-[16px] hover:bg-[#FFFFFF] hover:text-black transition-colors'> View projects</motion.a>
+                        <motion.div variants={childVariants1} className=' flex flex-row gap-4'>
+                            <motion.a whileTap={{scale:0.98}} whileHover={{ scale: 1.02 }} href='#project' className='bg-[#4A79E7] text-[#ffffff] px-4 py-2 rounded-full text-center cursor-pointer font-medium text-[14px] hover:bg-[#FFFFFF] hover:text-black transition-colors'> View projects</motion.a>
 
                             
                             <motion.a 
@@ -146,7 +145,7 @@ function Hero() {
                             initial="initial"
                             whileHover="hover" 
                             href="#contact" 
-                            className="flex flex-row items-center gap-2 bg-transparent text-[#ffffff] px-4 py-2 rounded-xl text-center cursor-pointer font-medium text-[16px] hover:bg-[#4A79E7] transition-colors"
+                            className="flex flex-row items-center gap-2 bg-transparent text-[#ffffff] px-4 py-2 rounded-full text-center cursor-pointer font-medium text-[14px] hover:bg-[#4A79E7] transition-colors"
                             > 
                             Get in touch
                             <motion.div
@@ -156,7 +155,7 @@ function Hero() {
                                 }}
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
-                                <Icon className="text-[16px]" icon="maki:arrow" />
+                                <Icon className="text-[14px]" icon="maki:arrow" />
                             </motion.div>
                             </motion.a>
                         </motion.div>
@@ -171,34 +170,34 @@ function Hero() {
                 </div>
 
 
-                <div>
+                <div className='space-y-5'>
                     {/*stack*/}
-                    <motion.div variants={childVariants1}>
+                    <motion.div variants={childVariants1} >
                         <h1 className='text-[#BDD1FF] text-[19px] font-medium mb-3'>Stack</h1>
-                        <motion.div className='flex flex-row flex-wrap gap-2' 
-                        transition={{ type: "spring", stiffness: 300, damping: 20 }} >
+                        <motion.div className='flex flex-row flex-wrap gap-3.5' 
+                        >
                             {stacks.map((stack) => (
                                 <motion.div
                                     key={stack.id}
 
-                                    className='rounded-full px-3 py-1 text-[#ffffff] bg-[#4A79E7] cursor-pointer'
+                                    className='rounded-full px-7.5 py-2.5 text-[#ffffff] bg-[#4A79E7] cursor-pointer'
                                     initial={{ boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)" }}
                                     whileHover={{
                                     boxShadow: "0px 0px 20px 5px rgba(99, 102, 241, 0.4)",
                                     scale: 1.05
                                     }}
                                 >
-                                    <p className='text-[14px]'>{stack.name}</p>
+                                    <p className='text-[14px] font-normal'>{stack.name}</p>
                                 </motion.div>
                             ))}
                         </motion.div>
                    
                         <hr className='border-[#728091] mt-6' />
-                     </motion.div>
+                    </motion.div>
                     
                     {/*language */}
                     <motion.div variants={childVariants1}>
-                        <h1 className='text-[#BDD1FF] text-[19px] font-medium mb-3 mt-4'>Languages</h1>
+                        <h1 className='text-[#BDD1FF] text-[19px] font-medium mb-3'>Languages</h1>
                         <div className='flex flex-col flex-wrap gap-2'>
 
                         {languages.map((language) => (<div key={language.id} className='flex flex-row flex-wrap gap-3'>
@@ -207,7 +206,7 @@ function Hero() {
                                     >
                                     <Icon style={{color:language.color}} className="text-[16px]" icon="material-symbols:circle" />
                                 </div>
-                                <p className='text-[#FFFFFF]'> {language.name} </p>
+                                <p className='text-[#FFFFFF] text-[14px] font-normal'> {language.name} </p>
 
                             </div>))}
                         </div>
@@ -217,7 +216,7 @@ function Hero() {
                      </motion.div>
                     {/*achievement */}
                     <motion.div variants={childVariants1}>
-                        <h1 className='text-[#BDD1FF] text-[19px] font-medium mb-3 mt-4'>Achievements</h1>
+                        <h1 className='text-[#BDD1FF] text-[19px] font-medium mb-3 '>Achievements</h1>
                         <div className='flex flex-col flex-wrap gap-2'>
 
                         {achievements.map((achievement) => (<div key={achievement.id} className='flex flex-row flex-wrap gap-3'>
@@ -226,7 +225,7 @@ function Hero() {
                                     >
                                     <Icon style={{color:achievement.color}} className="text-[16px]" icon={achievement.icon} />
                                 </div>
-                                <p className='text-[#FFFFFF]'> {achievement.name} </p>
+                                <p className='text-[#FFFFFF] text-[14px] font-normal'> {achievement.name} </p>
 
                             </div>))}
                         </div>
