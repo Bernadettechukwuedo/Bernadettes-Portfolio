@@ -14,7 +14,7 @@ const achievements =[
       color:'#2C9A8D'
     },
     { id:3,
-      name:'EITCA',
+      name:'EITCA (in progress)',
       icon:'mdi:certificate',
       color:'#539CF0'
     }
@@ -121,8 +121,39 @@ const childVariants1 = {
 
 function Hero() {
     return (
-        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center  overflow-hidden py-24 " id="hero">
-            <motion.div className=' max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 items-center  ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
+        <div className="bg-[#0D1117] min-h-screen w-full flex items-center justify-center relative overflow-hidden py-24 " id="hero">
+
+            {/* circuit board background */}
+            <motion.svg initial={{ opacity: 0 }} animate={{ opacity: 0.12 }} className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="circuit" width="80" height="80" patternUnits="userSpaceOnUse">
+                        <path d="M 0 40 L 20 40 M 60 40 L 80 40 M 40 0 L 40 20 M 40 60 L 40 80" fill="none" stroke="#2D9C8F" strokeWidth="0.7"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="40" r="3" fill="none" stroke="#2D9C8F" strokeWidth="0.7"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="20" cy="40" r="2" fill="#2D9C8F" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="60" cy="40" r="2" fill="#2D9C8F" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="20" r="2" fill="#2D9C8F" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="60" r="2" fill="#2D9C8F" opacity="0.6"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#circuit)"/>
+            </motion.svg>
+
+            {/* soft teal glow top right */}
+            <motion.div
+                className="absolute top-0 right-0 w-125 h-125 rounded-full pointer-events-none"
+                style={{ background: 'radial-gradient(circle, rgba(45,156,143,0.07) 0%, transparent 70%)' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+            ></motion.div>
+
+            {/* soft blue glow bottom left */}
+            <motion.div
+                className="absolute bottom-0 left-0 w-100 h-100 rounded-full pointer-events-none"
+                style={{ background: 'radial-gradient(circle, rgba(91,143,217,0.05) 0%, transparent 70%)' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+            ></motion.div>
+            <motion.div className=' relative max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 items-center  ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
                 <div className='space-y-8.5'>
                         <motion.div variants={childVariants1} className='flex flex-col lg:flex-row gap-4 md:gap-6 items-center' >
                             <img className=" w-40 h-40  rounded-full object-cover object-top border-2 border-[#BDD1FF]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
