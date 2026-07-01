@@ -144,6 +144,7 @@ function Hero() {
                 style={{ background: 'radial-gradient(circle, rgba(45,156,143,0.07) 0%, transparent 70%)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             ></motion.div>
 
             {/* soft blue glow bottom left */}
@@ -152,6 +153,7 @@ function Hero() {
                 style={{ background: 'radial-gradient(circle, rgba(91,143,217,0.05) 0%, transparent 70%)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
             ></motion.div>
             <motion.div className=' relative max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 items-center  ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
                 <div className='space-y-8.5'>
