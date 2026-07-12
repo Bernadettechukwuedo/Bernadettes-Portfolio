@@ -22,6 +22,8 @@ const projects = [
         language: 'Python',
         languageColor: '#3572A5',
         link: 'https://uniattend-app-1.onrender.com/',
+        img_url:'https://res.cloudinary.com/dotzzcayo/image/upload/v1783884923/Screenshot_75_dubmso.png',
+        alt_image:'An image of uniattend landing page'
     },
     {
         id:2,
@@ -32,6 +34,8 @@ const projects = [
         language: 'Python',
         languageColor: '#3572A5',
         link: 'https://ai-wishlist-generator.vercel.app/',
+        img_url:'https://res.cloudinary.com/dotzzcayo/image/upload/v1783885063/Screenshot_76_rtyfpn.png',
+        alt_image:'An image of the AI Wishlist Generator page'
     },
     {   
         id:3,
@@ -42,6 +46,8 @@ const projects = [
         language: 'Python',
         languageColor: '#3572A5',
         link: 'https://textlator.vercel.app/',
+        img_url:'https://res.cloudinary.com/dotzzcayo/image/upload/v1783885081/Screenshot_78_lbk6dr.png',
+        alt_image:'An image of the Textlator page'
     },
     {
         id:4,
@@ -52,12 +58,14 @@ const projects = [
         language: 'JavaScript',
         languageColor: '#3572A5',
         link: 'https://franceschuksbeauty.vercel.app/',
+        img_url:'https://res.cloudinary.com/dotzzcayo/image/upload/v1783885099/Screenshot_80_w8atoq.png',
+        alt_image:'An image of the Makeup Portfolio page'
     },
 ];
 
 function Project() {
-    // you will replace this with useState later
-    const [selectedProject, setSelectedProject] = useState(projects[0]);
+
+    const [selectedProject, setSelectedProject] = useState(null);
 
     return (
         <div className='bg-[#0D1117] py-24 border-t border-[#30363D] ' id="project">
@@ -122,9 +130,9 @@ function Project() {
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                onClick={() => setSelectedProject(project)}
+                                onClick={() => setSelectedProject(selectedProject?.id === project.id ? null : project)}
                                 className={`flex flex-row items-center gap-3 px-4 py-3 border-b border-[#1E3A44] cursor-pointer transition-colors
-                                    ${selectedProject.id=== project.id
+                                    ${selectedProject?.id=== project.id
                                         ? 'bg-[#1E3A44]'
                                         : 'hover:bg-[#163844]'
                                     }`}
@@ -148,6 +156,7 @@ function Project() {
                     {/* right — about panel */}
                     <div className='bg-[#0B1F28] p-6 flex flex-col gap-8'>
                         <AnimatePresence mode='wait'>
+                        {selectedProject ? (
                         <motion.div initial={{opacity:0, x:10}} animate={{opacity:1, x:0}} exit={{ opacity: 0, x: -10 }} transition={{ease:'easeInOut', duration:0.2}}>
                         {/* about */}
                         <div>
@@ -172,6 +181,17 @@ function Project() {
                             </div>
                         </div>
 
+                        {/*project image */}
+                        
+                        <div>
+                            <h2 className='text-[#F4F7F6] text-[14px] font-semibold mb-3 mt-4'>
+                                Project Image
+                            </h2>
+                            <hr className='border-[#1E3A44] mb-4' />
+                            <motion.img  initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} transition={{ease:'easeIn', duration:0.5 }} src={selectedProject.img_url} alt={selectedProject.alt_image} className='w-full h-auto rounded-md' />
+                        </div>
+
+
                         {/* languages */}
                         <div>
                             <h2 className='text-[#F4F7F6] text-[14px] font-semibold mb-3 mt-4'>
@@ -189,6 +209,7 @@ function Project() {
                             </div>
                         </div>
 
+
                         {/* github link */}
                         
                         <a  href={selectedProject.link}
@@ -201,6 +222,17 @@ function Project() {
                         </a>
                         
                         </motion.div>
+                        ):(
+                            <motion.div 
+                            key="empty"
+                            initial={{ opacity: 0 }} 
+                            animate={{ opacity: 1 }} 
+                            exit={{ opacity: 0 }}
+                            className="text-[#5B7F8E] text-sm text-center mt-10"
+                        >
+                            Select a project to view details
+                        </motion.div>
+                        )}
                         </AnimatePresence>
                     </div>
                     

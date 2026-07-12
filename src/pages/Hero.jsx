@@ -162,7 +162,7 @@ function Hero() {
                             <motion.div className='flex flex-col' >
                                 <h1 className='text-[#ffffff] text-[40px] font-black leading-tight'>Bernadette</h1>
                                 <h2 className='text-[#ffffff] text-[40px]  font-black leading-tight'>Chukwuedo</h2>
-                                <p className='text-[#BDD1FF] text-[14px] font-normal'>@bernadettechukwuedo</p>
+                                <a href="https://github.com/Bernadettechukwuedo" target="_blank" className='text-[#BDD1FF] text-[14px] font-normal'>@bernadettechukwuedo</a>
 
                             </motion.div>   
                         </motion.div>

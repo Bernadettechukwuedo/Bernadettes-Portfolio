@@ -57,7 +57,7 @@ function About(){
                 <motion.div className='space-y-6' variants={childVariants2}>
                     <p className='text-[#BDD1FF] font-semibold text-[14px]'>ABOUT</p>
                     <p className=' max-w-xl text-[#F4F7F6] text-[16px]'>I'm a fullstack software engineer, working across Django, FastAPI, React and Vue to build complete products. Lately I've been deepening into machine learning from classic models to neural networks so the systems I build can get smarter, not just bigger.</p>
-                    <p className=' max-w-xl text-[#F4F7F6] text-[16px] opacity-75'>Outside of code, I write on LinkedIn about growth, self-belief, and what it actually looks like to build a career in tech and I'm always glad to talk through career questions with developers earlier in their journey than me.</p>
+                    <p className=' max-w-xl text-[#F4F7F6] text-[16px] opacity-75'>Outside of code, I write on LinkedIn about growth, self-belief, and the realities of building a career in tech. I’m always happy to connect with tech professionals and anyone looking to start their journey or navigate their way into the industry.</p>
                 </motion.div>
 
             </div>
