@@ -188,7 +188,7 @@ function Project() {
                                 Project Image
                             </h2>
                             <hr className='border-[#1E3A44] mb-4' />
-                            <motion.img  initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} transition={{ease:'easeIn', duration:0.5 }} src={selectedProject.img_url} alt={selectedProject.alt_image} className='w-full h-auto rounded-md' />
+                            <motion.img  initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} whileTap={{ scale:1.05 }} transition={{ease:'easeIn', duration:0.5 }} src={selectedProject.img_url} alt={selectedProject.alt_image} className='w-full h-auto rounded-md' />
                         </div>
 
 
