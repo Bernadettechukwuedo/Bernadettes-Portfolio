@@ -65,14 +65,11 @@ function Navbar() {
             <div className="md:hidden flex items-center justify-between w-full px-8 py-5 bg-[#0D1117]/80 backdrop-blur-md  border-b border-[#30363D]">
                 <div className='flex flex-row items-center  gap-3'>
                     
-                    <a    href="https://github.com/Bernadettechukwuedo"
-                        target="_blank"
+                    <a    href="/"
+                      
                         rel="noopener noreferrer"
                     >
-                        <Icon
-                            className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
-                            icon="ri:github-line"
-                        />
+                    <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                     </a>
                     <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
              
@@ -96,16 +93,13 @@ function Navbar() {
                 
                         <div className='flex flex-row items-center  gap-3'>
             
-                            <a    href="https://github.com/Bernadettechukwuedo"
-                                target="_blank"
+                            <a    href="/"
+                             
                                 rel="noopener noreferrer"
                             >
-                                <Icon
-                                    className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
-                                    icon="ri:github-line"
-                                />
+                            <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                             </a>
-                            <a onClick={toggleMenu}  href="#hero"><span className='text-[#4A79E7] text-[16px]'>Bernadettechukwuedo</span></a>
+                            <span className='text-[#4A79E7] text-[16px]'>Bernadettechukwuedo</span>
                     
 
                         </div>
