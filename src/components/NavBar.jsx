@@ -42,14 +42,11 @@ function Navbar() {
             <motion.div className="hidden  max-w-340 mx-auto px-8 py-5 md:flex items-center justify-between " variants={containerVariants} initial="hidden" animate='visible'>
                 <motion.div className='flex flex-row items-center  gap-3' variants={childVariants1}>
                     
-                    <a    href="https://github.com/Bernadettechukwuedo"
-                        target="_blank"
+                    <a    href="/"
+                    
                         rel="noopener noreferrer"
                     >
-                        <Icon
-                            className="text-[#F4F7F6] text-2xl hover:text-[#BDD1FF] transition-colors"
-                            icon="ri:github-line"
-                        />
+                        <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                     </a>
                     <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
                     <span className='text-[#5B7F8E] text-[15px]'>/</span>

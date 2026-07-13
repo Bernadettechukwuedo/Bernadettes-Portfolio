@@ -158,7 +158,7 @@ function Hero() {
             <motion.div className=' relative max-w-340 mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 items-center  ' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
                 <div className='space-y-8.5'>
                         <motion.div variants={childVariants1} className='flex flex-col lg:flex-row gap-4 md:gap-6 items-center' >
-                            <img className=" w-40 h-40  rounded-full object-cover object-top border-2 border-[#BDD1FF]"src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
+                            <img className=" w-40 h-40  rounded-full object-cover object-top border-2  border-[#BDD1FF]/30 shadow-2xl shadow-black/50 "src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782344611/profile_esaxek.jpg' alt='An image of Bernadette Chukwuedo'/>
                             <motion.div className='flex flex-col' >
                                 <h1 className='text-[#ffffff] text-[40px] font-black leading-tight'>Bernadette</h1>
                                 <h2 className='text-[#ffffff] text-[40px]  font-black leading-tight'>Chukwuedo</h2>

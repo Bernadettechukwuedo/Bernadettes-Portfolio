@@ -48,10 +48,10 @@ const about_section=[
 function About(){
     return(
         <div className="bg-[#0D1117] py-24 border-t border-[#30363D] " id="about">
-            <motion.div variants={containerVariants} initial='hidden' whileInView='visible' viewport={{once:true}}>
+            <motion.div variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once:true, amount:0.3 }}>
             <div className='max-w-340 mx-auto px-8  grid grid-cols-1 md:grid-cols-2 gap-8' >
                 <motion.div variants={childVariants1}>
-                        <img  className='border-2 border-[#BDD1FF] rounded-lg w-full h-100 object-cover object-top' src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782487367/about_profile_qai6b9.jpg' alt='An image of Bernadette Chukwuedo'/>
+                        <img  loading='lazy' className='border-2 border-[#BDD1FF]/30 shadow-2xl shadow-black/50 rounded-lg w-full h-100 object-cover object-top' src='https://res.cloudinary.com/dotzzcayo/image/upload/v1782487367/about_profile_qai6b9.jpg' alt='An image of Bernadette Chukwuedo'/>
                 </motion.div>
 
                 <motion.div className='space-y-6' variants={childVariants2}>
