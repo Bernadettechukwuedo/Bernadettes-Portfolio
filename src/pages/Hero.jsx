@@ -128,11 +128,11 @@ function Hero() {
                 <defs>
                     <pattern id="circuit" width="80" height="80" patternUnits="userSpaceOnUse">
                         <path d="M 0 40 L 20 40 M 60 40 L 80 40 M 40 0 L 40 20 M 40 60 L 40 80" fill="none" stroke="#2D9C8F" strokeWidth="0.7"/>
-                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="40" r="3" fill="none" stroke="#2D9C8F" strokeWidth="0.7"/>
-                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="20" cy="40" r="2" fill="#2D9C8F" opacity="0.6"/>
-                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="60" cy="40" r="2" fill="#2D9C8F" opacity="0.6"/>
-                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="20" r="2" fill="#2D9C8F" opacity="0.6"/>
-                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="60" r="2" fill="#2D9C8F" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="40" r="3" fill="none" stroke="#BDD1FF" strokeWidth="0.7"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="20" cy="40" r="2" fill="#BDD1FF" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="60" cy="40" r="2" fill="#BDD1FF" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="20" r="2" fill="#BDD1FF" opacity="0.6"/>
+                        <motion.circle initial={{ opacity:0}} animate={{opacity:[0.2, 0.8, 0.2]}} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} cx="40" cy="60" r="2" fill="#BDD1FF" opacity="0.6"/>
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#circuit)"/>
@@ -141,7 +141,7 @@ function Hero() {
             {/* soft teal glow top right */}
             <motion.div
                 className="absolute top-0 right-0 w-125 h-125 rounded-full pointer-events-none"
-                style={{ background: 'radial-gradient(circle, rgba(45,156,143,0.07) 0%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(circle, rgba(189, 209, 255, 0.07) 0%, transparent 70%)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
