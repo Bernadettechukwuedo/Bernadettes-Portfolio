@@ -63,7 +63,7 @@ function About(){
             </div>
             <motion.div className='max-w-340 mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 mt-14' variants={childVariants3}>
 
-               {about_section.map((abouts) =>( <motion.div key={abouts.id} className='bg-[#163844] rounded-md p-8 flex flex-col space-y-2 justify-center text-center items-center'>
+               {about_section.map((abouts) =>( <motion.div key={abouts.id} className='bg-[#142035] rounded-md p-8 flex flex-col space-y-2 justify-center text-center items-center'>
                     <Icon style= {{ color:abouts.color}} className=" text-2xl" icon={abouts.icon} />
                     <p className='text-[#F4F7F6] '> {abouts.name}</p>
                 </motion.div>))}

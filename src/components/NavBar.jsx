@@ -46,10 +46,10 @@ function Navbar() {
                     
                         rel="noopener noreferrer"
                     >
-                        <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
+                        <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1784020169/FAVICON_2_cgw3hm.svg" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                     </a>
                     <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
-                    <span className='text-[#5B7F8E] text-[15px]'>/</span>
+                    <span className='text-[#BDD1FF]/50 text-[15px]'>/</span>
                     <span className='text-[#F4F7F6] text-[15px] font-medium'>portfolio</span>
 
                 </motion.div>
@@ -69,7 +69,7 @@ function Navbar() {
                       
                         rel="noopener noreferrer"
                     >
-                    <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
+                    <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1784020169/FAVICON_2_cgw3hm.svg" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                     </a>
                     <a href="#hero"><span className='text-[#4A79E7] text-[15px]'>Bernadettechukwuedo</span></a>
              
@@ -97,7 +97,7 @@ function Navbar() {
                              
                                 rel="noopener noreferrer"
                             >
-                            <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1783942587/favicon_hsvabg.png" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
+                            <img src="https://res.cloudinary.com/dotzzcayo/image/upload/v1784020169/FAVICON_2_cgw3hm.svg" alt="Bernadette Chukwuedo Logo" className='w-10 h-10 object-contain '/>
                             </a>
                             <span className='text-[#4A79E7] text-[16px]'>Bernadettechukwuedo</span>
                     

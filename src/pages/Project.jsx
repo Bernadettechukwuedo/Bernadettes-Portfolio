@@ -56,7 +56,7 @@ const projects = [
         status: 'deployed',
         stack: ['React', 'Tailwind CSS'],
         language: 'JavaScript',
-        languageColor: '#3572A5',
+        languageColor: '#f1e05a',
         link: 'https://franceschuksbeauty.vercel.app/',
         img_url:'https://res.cloudinary.com/dotzzcayo/image/upload/v1783885099/Screenshot_80_w8atoq.png',
         alt_image:'An image of the Makeup Portfolio page'
@@ -78,27 +78,27 @@ function Project() {
 
                 {/* github top bar */}
                 <motion.div variants={childVariants1}>
-                <div className='flex flex-row items-center bg-[#122530] border border-[#1E3A44] rounded-t-lg p-3 gap-3'>
+                <div className='flex flex-row items-center bg-[#142035]  border border-[#BDD1FF]/30 rounded-t-lg p-3 gap-3'>
                     
                     <a    href="https://github.com/Bernadettechukwuedo"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <Icon
-                            className="text-[#F4F7F6] text-xl hover:text-[#2D9C8F] transition-colors"
+                            className="text-[#F4F7F6] text-xl hover:text-[#4A79E7] transition-colors"
                             icon="ri:github-line"
                         />
                     </a>
                     <span className='text-[#BDD1FF] text-[12px] md:text-[14px] '>Bernadettechukwuedo</span>
-                    <span className='text-[#5B7F8E] text-[12px] md:text-[14px] '>/</span>
+                    <span className='text-[#BDD1FF]/50 text-[12px] md:text-[14px] '>/</span>
                     <span className='text-[#F4F7F6] text-[12px] md:text-[14px] font-medium'>projects</span>
-                    <div className='hidden md:flex border border-[#1E3A44] rounded-full px-3 py-0.5 ml-1'>
-                        <p className='text-[#5B7F8E] text-[11px] '>Public</p>
+                    <div className='hidden md:flex border border-[#BDD1FF]/30 rounded-full px-3 py-0.5 ml-1'>
+                        <p className='text-[#7A9CAD] text-[11px] font-medium'>Public</p>
                     </div>
                 </div>
 
                 {/* code tab */}
-                <div className='flex flex-row items-center bg-[#0B1F28] border-x px-3 py-2 gap-2 border-b border-[#BDD1FF]'>
+                <div className='flex flex-row items-center bg-[#142035]  border-x px-3 py-2 gap-2 border-b border-[#BDD1FF]/30'>
                     <Icon
                         className="text-[#F4F7F6] text-lg"
                         icon="mingcute:code-line"
@@ -107,21 +107,21 @@ function Project() {
                 </div>
 
                 {/* main content */}
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-0 border-x border-b border-[#1E3A44] rounded-b-lg overflow-hidden'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-0 border-x border-b border-[#BDD1FF]/30 rounded-b-lg overflow-hidden'>
 
                     {/* left — file list */}
-                    <div className='bg-[#122530] border-r border-[#1E3A44]'>
+                    <div className='bg-[#142035]  border-r border-[#BDD1FF]/30'>
 
                         {/* branch row */}
-                        <div className='flex flex-row justify-between items-center px-4 py-3 border-b border-[#1E3A44]'>
+                        <div className='flex flex-row justify-between items-center px-4 py-3 border-b border-[#BDD1FF]/30'>
                             <div className='flex flex-row items-center gap-2'>
                                 <Icon
-                                    className="text-[#5B7F8E] text-base"
+                                    className="text-[#7A9CAD] text-base"
                                     icon="boxicons:git-branch"
                                 />
-                                <span className='text-[#5B7F8E] text-[12px]'>main</span>
+                                <span className='text-[#7A9CAD] text-[12px]'>main</span>
                             </div>
-                            <span className='text-[#5B7F8E] text-[12px]'>
+                            <span className='text-[#7A9CAD] text-[12px]'>
                                 {projects.length} projects
                             </span>
                         </div>
@@ -131,21 +131,21 @@ function Project() {
                             <div
                                 key={project.id}
                                 onClick={() => setSelectedProject(selectedProject?.id === project.id ? null : project)}
-                                className={`flex flex-row items-center gap-3 px-4 py-3 border-b border-[#1E3A44] cursor-pointer transition-colors
+                                className={`flex flex-row items-center gap-3 px-4 py-3 border-b border-[#BDD1FF]/30 cursor-pointer transition-colors
                                     ${selectedProject?.id=== project.id
-                                        ? 'bg-[#1E3A44]'
-                                        : 'hover:bg-[#163844]'
+                                        ? 'bg-[#4A79E7]/20'
+                                        : 'hover:bg-[#4A79E7]/20'
                                     }`}
                             >
                                 <Icon
-                                    className="text-[#5B7F8E] text-lg "
+                                    className="text-[#7A9CAD] text-lg "
                                     icon="material-symbols-light:folder-rounded"
                                 />
                                 <span className='text-[#BDD1FF] text-[14px]'>
                                     {project.name}
                                 </span>
                                 {project.status && (
-                                    <span className='ml-auto text-[10px] text-[#BDD1FF] border border-[#BDD1FF] rounded-full px-2 py-0.5'>
+                                    <span className='ml-auto text-[10px] text-[#BDD1FF] border border-[#BDD1FF]/30 rounded-full px-2 py-0.5'>
                                         {project.status}
                                     </span>
                                 )}
@@ -154,7 +154,7 @@ function Project() {
                     </div>
 
                     {/* right — about panel */}
-                    <div className='bg-[#0B1F28] p-6 flex flex-col gap-8'>
+                    <div className='bg-[#142035]  p-6 flex flex-col gap-8'>
                         <AnimatePresence mode='wait'>
                         {selectedProject ? (
                         <motion.div initial={{opacity:0, x:10}} animate={{opacity:1, x:0}} exit={{ opacity: 0, x: -10 }} transition={{ease:'easeInOut', duration:0.2}}>
@@ -163,8 +163,8 @@ function Project() {
                             <h2 className='text-[#F4F7F6] text-[14px] font-semibold mb-3'>
                                 About
                             </h2>
-                            <hr className='border-[#1E3A44] mb-4' />
-                            <p className='text-[#5B7F8E] text-[13px] leading-relaxed'>
+                            <hr className='border-[#BDD1FF]/30 mb-4' />
+                            <p className='text-[#7A9CAD] text-[13px] leading-relaxed font-medium'>
                                 {selectedProject.description}
                             </p>
 
@@ -173,7 +173,7 @@ function Project() {
                                 {selectedProject.stack.map((tech, i) => (
                                     <span
                                         key={i}
-                                        className='text-[11px] text-[#BDD1FF] border border-[#1E3A44] rounded-full px-3 py-0.5'
+                                        className='text-[11px] text-[#BDD1FF] border border-[#BDD1FF]/30 rounded-full px-3 py-0.5'
                                     >
                                         {tech}
                                     </span>
@@ -187,7 +187,7 @@ function Project() {
                             <h2 className='text-[#F4F7F6] text-[14px] font-semibold mb-3 mt-4'>
                                 Project Image
                             </h2>
-                            <hr className='border-[#1E3A44] mb-4' />
+                            <hr className='border-[#BDD1FF]/30 mb-4' />
                             <motion.img  initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} whileTap={{ scale:1.05 }} transition={{ease:'easeIn', duration:0.5 }} src={selectedProject.img_url} alt={selectedProject.alt_image} className='w-full h-auto rounded-md' />
                         </div>
 
@@ -197,13 +197,13 @@ function Project() {
                             <h2 className='text-[#F4F7F6] text-[14px] font-semibold mb-3 mt-4'>
                                 Languages
                             </h2>
-                            <hr className='border-[#1E3A44] mb-4' />
+                            <hr className='border-[#BDD1FF]/30 mb-4' />
                             <div className='flex flex-row items-center gap-2'>
                                 <span
                                     className='w-3 h-3 rounded-full '
                                     style={{ background: selectedProject.languageColor }}
                                 />
-                                <span className='text-[#5B7F8E] text-[13px]'>
+                                <span className='text-[#7A9CAD] text-[13px] font-medium'>
                                     {selectedProject.language}
                                 </span>
                             </div>
@@ -228,7 +228,7 @@ function Project() {
                             initial={{ opacity: 0 }} 
                             animate={{ opacity: 1 }} 
                             exit={{ opacity: 0 }}
-                            className="text-[#5B7F8E] text-sm text-center mt-10"
+                            className="text-[#7A9CAD] text-sm text-center mt-10 font-medium"
                         >
                             Select a project to view details
                         </motion.div>
